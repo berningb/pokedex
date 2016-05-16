@@ -1,0 +1,32 @@
+<h1 id='mainName'>{{steps.subname}}</h1>
+<div id='mainDescription'>
+    {{steps.description}}
+</div>
+
+<div class='container' id='images'>
+    <div class='row'>
+        <div class='col-sm-4'>
+            <div ng-hide='steps.btnB' class='thing'>
+                <a class='mainBtn' href='#step{{steps.number-1}}'>
+                    <img id='mainLeftImg' ng-src='{{steps.imageL}}' height='100px' width="100px">
+                    <p class='mainP'>Back</p>
+                </a>
+            </div>
+        </div>
+        <div class='col-sm-4' id='left'>
+            <img id='myimg' ng-src='{{steps.image}}' height='400px' width="400px">
+        </div>
+        <div class='col-sm-4'>
+            <div ng-hide='steps.btnN' class='thing'>
+                <a class='mainBtn' href='#step{{steps.number*1+1}}'>
+                    <img id='mainRightImg' ng-src='{{steps.imageR}}' height='100px' width="100px">
+                    <p class='mainP'>Next</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--
+<div id='ad2'></div>
+<div id='ad1'></div>-->

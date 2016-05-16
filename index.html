@@ -1,35 +1,53 @@
 <!DOCTYPE html>
 <html>
 
-<html ng-app="thing">
-<!-- SCROLLS -->
-<!-- load bootstrap and fontawesome via CDN -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
-<link rel="stylesheet" href="style.css" />
+<head>
+    <link href="main.css" type="text/css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</head>
 
-<!-- SPELLS -->
-<!-- load angular and angular route via CDN -->
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
-<script src="script.js"></script>
-
-<body>
-
-    <div class='container-fluid'>
-        <div class='row'>
-            <div id="main" class='col-sm-2'>
-
+<body ng-app="myApp" id="bod">
+    <nav class="navbar" id="navigator">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#"><img src="images/Pokemon_logo.png" class="logo"></a>
             </div>
-
-            <div id='full' class='col-sm-10'>
-                <div ng-view></div>
-            </div>
-
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#two">Page 1</a></li>
+                <li><a href="#three">Page 2</a></li>
+                <li><a href="#four">Page 3</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                
+                <li><input type="text" class="form-control" placeholder="Search"></li>
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
         </div>
-    </div>
+    </nav>
 
+    <li><a href="#/">Home</a></li>
+    <li><a href="#one">Step 1</a> </li>
+    <li><a href="#two">Step 2</a> </li>
+    <li><a href="#three">Step 3</a> </li>
+    <li><a href="#four">Step 4</a> </li>
+    <li><a href="#five">Step 5</a> </li>
+    <li><a href="#six">Step 6</a> </li>
+    <li><a href="#seven">Step 7</a> </li>
+    <li><a href="#eight">Step 8</a> </li>
+    <li><a href="#nine">Step 9</a> </li>
+
+    <section ng-controller="mainController">
+        <article ng-view>
+
+        </article>
+    </section>
 </body>
 
 </html>
