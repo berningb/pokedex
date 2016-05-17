@@ -2,6 +2,10 @@ var app = angular.module('myApp', ['ngRoute']);
 
 app.config(function ($routeProvider) {
 
+    for (i = 1; i < 152; i++) {
+        $('#dataContainer').append("<img src = 'images/animated/" + i + ".gif'/>");
+    }
+
     $routeProvider
         .when('/', {
             templateUrl: 'pages/home.html',
