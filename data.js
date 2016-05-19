@@ -324,7 +324,7 @@ orm.connect("mysql://ayylmao:berningman123@mysql.hlaingfahim.com/w3pokedex", fun
     ]
 
     var types = [
-        ['Grass', 'Poison'],
+           ['Grass', 'Poison'],
         ['Grass', 'Poison'],
         ['Grass', 'Poison'],
         ['Fire', ''],
@@ -411,6 +411,10 @@ orm.connect("mysql://ayylmao:berningman123@mysql.hlaingfahim.com/w3pokedex", fun
         ['Normal', 'Flying'],
         ['Water', ''],
         ['Water', 'Ice'],
+        ['Poison', ''],
+        ['Poison', ''],
+        ['Water', ''],
+        ['Water', 'Ice'],
         ['Ghost', 'Poison'],
         ['Ghost', 'Poison'],
         ['Ghost', 'Poison'],
@@ -454,11 +458,6 @@ orm.connect("mysql://ayylmao:berningman123@mysql.hlaingfahim.com/w3pokedex", fun
         ['Normal', ''],
         ['Normal', ''],
         ['Water', ''],
-        ['Water', 'Flying'],
-        ['Water', 'Ice'],
-        ['Normal', ''],
-        ['Normal', ''],
-        ['Water', ''],
         ['Electric', ''],
         ['Fire', ''],
         ['Normal', ''],
@@ -481,7 +480,7 @@ orm.connect("mysql://ayylmao:berningman123@mysql.hlaingfahim.com/w3pokedex", fun
     var stats = [
         [45, 49, 49, 65, 65, 45, 318],
         [60, 62, 63, 80, 80, 60, 405],
-        [80, 82, 83, 100 100 80 525],
+        [80, 82, 83, 100, 100, 80, 525],
         [39, 52, 43, 60, 50, 65, 309],
         [58, 64, 58, 80, 65, 80, 405],
         [78, 84, 78, 109, 85, 100, 534],
