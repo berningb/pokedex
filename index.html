@@ -12,92 +12,34 @@
 </head>
 
 <body ng-app="myApp" id="bod">
-    <div id="myModal" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-
-            <!-- Modal content-->
-            <!--            data-backdrop="static"-->
-            <div id="sign-up-modal" class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Login</h4>
-                </div>
-                <div id="modal-body" class="modal-body">
-                    <div id="modal-output"></div>
-                    <form role="form" id="login">
-                        <div class="form-group">
-                            <label for="username">Username:</label>
-                            <input required class="form-control" type="text" id="username">
-                        </div>
-                        <div class="form-group">
-                            <label for="password">Password:</label>
-                            <input required class="form-control" type="text" id="password">
-                        </div>
-                        <!--
-        <div class="form-group">
-    <label for="email">Email:</label>
-    <input required class="form-control" type="email" id="email">
-</div>
--->
-                        <input type="submit" class="btn btn-success">
-                    </form>
-
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-
-
-
     <nav class="navbar" id="navigator">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#"><img src="images/Pokemon_logo.png" class="logo"></a>
+<!--
+                <a class="navbar-brand" href="#index"><img src="images/http://fontmeme.com/embed.php?text=Monster&name=Pokemon Hollow.ttf&size=114&style_color=15155E.png" alt="Dispute Bills" class="logo">
+                </a>
+-->
+            <a class="navbar-brand" href="#index"><img src="http://pre03.deviantart.net/7f89/th/pre/i/2015/147/7/c/pikachu_by_mqken-d8v0sq7.png" alt="Pokemon Font" class="logo"></a>
             </div>
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#">Home</a></li>
-                <li><a href="#two">Page 1</a></li>
-                <li><a href="#three">Page 2</a></li>
-                <li><a href="#four">Page 3</a></li>
+                <li><a href="#one">Container Page</a></li>
+                <li><a href="#two">Page 2</a></li>
+                <li><a href="#three">Page 3</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-
                 <li>
-                    <input type="text" class="form-control" placeholder="Search">
+                    <input type="text" class="form-control" placeholder="Search" id="search">
                 </li>
-                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
             </ul>
         </div>
     </nav>
-
-    <li><a href="#/">Home</a></li>
-    <li><a href="#one">Step 1</a> </li>
-    <li><a href="#two">Step 2</a> </li>
-    <li><a href="#three">Step 3</a> </li>
-    <li><a href="#four">Step 4</a> </li>
-    <li><a href="#five">Step 5</a> </li>
-    <li><a href="#six">Step 6</a> </li>
-    <li><a href="#seven">Step 7</a> </li>
-    <li><a href="#eight">Step 8</a> </li>
-    <li><a href="#nine">Step 9</a> </li>
-    
-    <div id = "dataContainer">
-        
-    </div>
-    
 
     <section ng-controller="mainController">
         <article ng-view>
 
         </article>
     </section>
-<!--    <script src="data.js"></script>-->
 </body>
 
 </html>
