@@ -17,6 +17,7 @@ orm.connect("mysql://ayylmao:berningman123@mysql.hlaingfahim.com/w3pokedex", fun
 
     var Monster = db.define("monster", {
         name: String,
+        number: String,
         type1: String,
         type2: String,
         baseHp: Number,
@@ -36,6 +37,7 @@ orm.connect("mysql://ayylmao:berningman123@mysql.hlaingfahim.com/w3pokedex", fun
             id: i + 1
         }, 1, function (err, monster) {
             monArr[j].push(monster[0].id);
+            monArr[j].push(monster[0].number);
             monArr[j].push(monster[0].name);
             monArr[j].push(monster[0].type1);
             monArr[j].push(monster[0].type2);
