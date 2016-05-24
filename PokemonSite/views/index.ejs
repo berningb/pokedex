@@ -55,21 +55,20 @@
         </thead>
         <tbody id="tableRows">
             <% for(var i=0; i < monArr.length; i++) { %>
-
                 <tr onclick="location.href='#one'">
                     <td>
-                        <%= monArr[i][1] %>
+                        <%= monArr[i].number %>
                     </td>
-                    <td><img src="images/sprites/<%= monArr[i][0] %>.gif"></td>
+                    <td><img src="images/sprites/<%= monArr[i].id %>.gif"></td>
                     <td>
-                        <%= monArr[i][2] %>
+                        <%= monArr[i].name %>
                     </td>
                     <td>
                         <div>
-                            <%= monArr[i][2] %>
+                            <%= monArr[i].type1%>
                         </div>
                         <div>
-                            <%= monArr[i][3] %>
+                            <%= monArr[i].type2 %>
                         </div>
                     </td>
                 </tr>
