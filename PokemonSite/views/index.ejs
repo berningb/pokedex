@@ -44,38 +44,7 @@
 
     </div>
 
-    <table class="table table-hover" id="landing_table">
-        <thead>
-            <tr>
-                <th>#</th>
-                <th>Sprite</th>
-                <th>Name</th>
-                <th>Type</th>
-            </tr>
-        </thead>
-        <tbody id="tableRows">
-            <% for(var i=0; i < monArr.length; i++) { %>
-                <tr onclick="location.href='#one'">
-                    <td>
-                        <%= monArr[i].number %>
-                    </td>
-                    <td><img src="images/sprites/<%= monArr[i].id %>.gif"></td>
-                    <td>
-                        <%= monArr[i].name %>
-                    </td>
-                    <td>
-                        <div>
-                            <%= monArr[i].type1%>
-                        </div>
-                        <div>
-                            <%= monArr[i].type2 %>
-                        </div>
-                    </td>
-                </tr>
-                <% } %>
-        </tbody>
-    </table>
-
+    
    
     <section ng-controller="mainController">
         <article ng-view>

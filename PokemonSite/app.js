@@ -41,4 +41,12 @@ app.get('/', function (req, res) {
 	});    
 });
 
+app.get('/home', function (req, res) {
+	req.models.monster.all(function(err, results){
+		res.render('home', {
+        	monArr: results
+    	});
+	});    
+});
+
 app.listen(3000);
