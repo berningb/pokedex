@@ -35,7 +35,7 @@ app.use(orm.express("mysql://ayylmao:berningman123@mysql.hlaingfahim.com/w3poked
             description: String
         });
         
-        models.monster.hasMany
+//        models.monster.hasMany
         next();
     }
     
