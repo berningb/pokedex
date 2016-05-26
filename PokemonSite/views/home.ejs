@@ -56,18 +56,18 @@
         <tbody id="tableRows">
             <% for(var i=0; i < monArr.length; i++) { %>
                 <tr onclick="location.href='#one'">
-                    <td>
+                    <td class="number">
                         <%= monArr[i].number %>
                     </td>
                     <td><img src="images/sprites/<%= monArr[i].id %>.gif"></td>
-                    <td>
+                    <td class="name">
                         <%= monArr[i].name %>
                     </td>
                     <td>
-                        <div class = "type">
+                        <div class="type">
                             <%= monArr[i].type1%>
                         </div>
-                        <div class = "type">
+                        <div class="type">
                             <%= monArr[i].type2 %>
                         </div>
                     </td>
@@ -76,7 +76,7 @@
         </tbody>
     </table>
 
-   
+
     <section ng-controller="mainController">
         <article ng-view>
 
