@@ -64,10 +64,10 @@
                         <%= monArr[i].name %>
                     </td>
                     <td>
-                        <div class="type">
+                        <div class="type <%= monArr[i].type1%>" >
                             <%= monArr[i].type1%>
                         </div>
-                        <div class="type">
+                        <div class="type <%= monArr[i].type2 %>">
                             <%= monArr[i].type2 %>
                         </div>
                     </td>
@@ -77,7 +77,7 @@
     </table>
 
 
-    <section ng-controller="mainController" onload="giveTypes()">
+    <section ng-controller="mainController" >
         <article ng-view>
 
         </article>
