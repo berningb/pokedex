@@ -118,3 +118,4 @@ function giveTypes() {
             break;
         }
     }
+}
