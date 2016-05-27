@@ -1,6 +1,7 @@
 var express = require('express');
 var orm = require("orm");
 var app = express();
+var monArr;
 app.use("/styles", express.static(__dirname + '/styles'));
 app.use("/scripts", express.static(__dirname + '/scripts'));
 app.use("/pages", express.static(__dirname + '/pages'));
@@ -25,7 +26,7 @@ app.use(orm.express("mysql://ayylmao:berningman123@mysql.hlaingfahim.com/w3poked
             description: String
 
         });
-        
+
         models.weakness = db.define("weakness", {
             name: String
         });
@@ -34,12 +35,12 @@ app.use(orm.express("mysql://ayylmao:berningman123@mysql.hlaingfahim.com/w3poked
             name: String,
             description: String
         });
-        
-//        models.monster.hasMany
+
+        //        models.monster.hasMany
         next();
     }
-    
-    
+
+
 
 
 }));
@@ -49,18 +50,12 @@ app.set('view engine', 'ejs');
 
 app.get('/', function (req, res) {
     req.models.monster.all(function (err, results) {
-        res.render('index', {
-            monArr: results
-        });
-    });
-});
-
-app.get('/home', function (req, res) {
-    req.models.monster.all(function (err, results) {
         res.render('home', {
             monArr: results
         });
     });
 });
 
-app.listen(3000);
+
+
+app.listen(8080);

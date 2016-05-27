@@ -1,38 +1,37 @@
 (function (window, document) {
-var menu = document.getElementById('menu'),
-    WINDOW_CHANGE_EVENT = ('onorientationchange' in window) ? 'orientationchange':'resize';
+    var menu = document.getElementById('menu'),
+        WINDOW_CHANGE_EVENT = ('onorientationchange' in window) ? 'orientationchange' : 'resize';
 
-function toggleHorizontal() {
+    function toggleHorizontal() {
     [].forEach.call(
-        document.getElementById('menu').querySelectorAll('.custom-can-transform'),
-        function(el){
-            el.classList.toggle('pure-menu-horizontal');
+            document.getElementById('menu').querySelectorAll('.custom-can-transform'),
+            function (el) {
+                el.classList.toggle('pure-menu-horizontal');
+            }
+        );
+    };
+
+    function toggleMenu() {
+        // set timeout so that the panel has a chance to roll up
+        // before the menu switches states
+        if (menu.classList.contains('open')) {
+            setTimeout(toggleHorizontal, 500);
+        } else {
+            toggleHorizontal();
         }
-    );
-};
+        menu.classList.toggle('open');
+        document.getElementById('toggle').classList.toggle('x');
+    };
 
-function toggleMenu() {
-    // set timeout so that the panel has a chance to roll up
-    // before the menu switches states
-    if (menu.classList.contains('open')) {
-        setTimeout(toggleHorizontal, 500);
+    function closeMenu() {
+        if (menu.classList.contains('open')) {
+            toggleMenu();
+        }
     }
-    else {
-        toggleHorizontal();
-    }
-    menu.classList.toggle('open');
-    document.getElementById('toggle').classList.toggle('x');
-};
 
-function closeMenu() {
-    if (menu.classList.contains('open')) {
+    document.getElementById('toggle').addEventListener('click', function (e) {
         toggleMenu();
-    }
-}
+    });
 
-document.getElementById('toggle').addEventListener('click', function (e) {
-    toggleMenu();
-});
-
-window.addEventListener(WINDOW_CHANGE_EVENT, closeMenu);
+    window.addEventListener(WINDOW_CHANGE_EVENT, closeMenu);
 })(this, this.document);

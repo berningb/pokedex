@@ -1,0 +1,31 @@
+<table class="table table-hover" id="landing_table"=>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Sprite</th>
+            <th>Name</th>
+            <th>Type</th>
+        </tr>
+    </thead>
+    <tbody id="tableRows">
+        <% for(var i=0; i < monArr.length; i++) { %>
+            <tr class="monster">
+                <td class="number">
+                    {{message}}
+                </td>
+                <td><img src="images/sprites/<%= monArr[i].id %>.gif"></td>
+                <td class="name">
+                    {{name}}
+                </td>
+                <td>
+                    <div class="type1 <%= monArr[i].type1%>">
+                        <%= monArr[i].type1%>
+                    </div>
+                    <div class="type2 <%= monArr[i].type2 %>">
+                        <%= monArr[i].type2 %>
+                    </div>
+                </td>
+            </tr>
+            <% } %>
+    </tbody>
+</table>
