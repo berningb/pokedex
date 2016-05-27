@@ -23,31 +23,26 @@ app.config(function ($routeProvider) {
             templateUrl: 'pages/four.html',
             controller: 'mainController'
         })
-
-    .when('/five', {
-        templateUrl: 'pages/five.html',
-        controller: 'mainController'
-    })
-
-    .when('/six', {
-        templateUrl: 'pages/six.html',
-        controller: 'mainController'
-    })
-
-    .when('/seven', {
-        templateUrl: 'pages/seven.html',
-        controller: 'mainController'
-    })
-
-    .when('/eight', {
-        templateUrl: 'pages/eight.html',
-        controller: 'mainController'
-    })
-
-    .when('/nine', {
-        templateUrl: 'pages/nine.html',
-        controller: 'mainController'
-    })
+        .when('/five', {
+            templateUrl: 'pages/five.html',
+            controller: 'mainController'
+        })
+        .when('/six', {
+            templateUrl: 'pages/six.html',
+            controller: 'mainController'
+        })
+        .when('/seven', {
+            templateUrl: 'pages/seven.html',
+            controller: 'mainController'
+        })
+        .when('/eight', {
+            templateUrl: 'pages/eight.html',
+            controller: 'mainController'
+        })
+        .when('/nine', {
+            templateUrl: 'pages/nine.html',
+            controller: 'mainController'
+        })
 });
 
 app.controller('mainController', function ($scope) {
