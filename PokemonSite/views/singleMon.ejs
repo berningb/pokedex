@@ -60,7 +60,28 @@
                                                     <%= monArr.type2%>
                                                 </td>
                                             </tr>
+<<<<<<< HEAD
 
+=======
+                                            <tr>
+                                                <td>Abilities:</td>
+                                                <% for(var i=0; i < monArr.ability.length; i++) { %>
+                                                    <td>
+                                                        <%= monArr.ability[i].name%>
+                                                 
+                                                        </br>
+                                                        
+                                                        <%= monArr.ability[i].description%>
+                                                    </td>
+                                                <% }%>
+                                            </tr>
+                                            <tr>
+                                                <td>Weaknesses:</td>
+                                                <% for(var i=0; i < monArr.weakness.length; i++) { %>
+                                                    <td><%= monArr.weakness[i].name%></td>
+                                                <% }%>
+                                            </tr>
+>>>>>>> ca7deae352a259cdeb8521cf3a5779128589dced
                                             <tr>
                                                 <td>BaseHp:</td>
                                                 <td>
