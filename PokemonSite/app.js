@@ -1,7 +1,6 @@
 var express = require('express');
 var orm = require("orm");
 var app = express();
-var monArr;
 app.use("/styles", express.static(__dirname + '/styles'));
 app.use("/scripts", express.static(__dirname + '/scripts'));
 app.use("/pages", express.static(__dirname + '/pages'));
@@ -36,17 +35,28 @@ app.use(orm.express("mysql://ayylmao:berningman123@mysql.hlaingfahim.com/w3poked
             description: String
         });
 
-        //        models.monster.hasMany
+//        models.monster.hasMany('weakness', models.weakness, {},{autoFetch:true});
+//        models.monster.hasMany('ability', models.ability, {},{autoFetch:true});
+//
+//        models.monster.get(1, function (err, monster) {
+//            if (err) throw err;
+//            //console.log(monster.weakness)
+//            
+//        });
+//        models.monster.get(1, function (err, monster) {
+//            if (err) throw err;
+//            //console.log(monster.ability);
+//
+//        });
+
         next();
     }
-
-
-
-
 }));
 
 
 app.set('view engine', 'ejs');
+
+
 
 app.get('/', function (req, res) {
     req.models.monster.all(function (err, results) {
@@ -56,6 +66,4 @@ app.get('/', function (req, res) {
     });
 });
 
-
-
-app.listen(8080);
+app.listen(3000);
