@@ -38,17 +38,8 @@ app.use(orm.express("mysql://ayylmao:berningman123@mysql.hlaingfahim.com/w3poked
         models.monster.hasMany('weakness', models.weakness, {},{autoFetch:true});
         models.monster.hasMany('ability', models.ability, {},{autoFetch:true});
 
-        models.monster.get(1, function (err, monster) {
-            if (err) throw err;
-            //console.log(monster.weakness)
-            
-        });
-        models.monster.get(1, function (err, monster) {
-            if (err) throw err;
-            //console.log(monster.ability);
-
-        });
-
+        
+con
         next();
     }
 }));
