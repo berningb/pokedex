@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="styles/main.css" type="text/css" rel="stylesheet">
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="scripts/script.js"></script>
+</head>
+
+<body ng-app="myApp" id="bod">
+    <nav class="navbar" id="navigator">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#index"><img src="http://pre03.deviantart.net/7f89/th/pre/i/2015/147/7/c/pikachu_by_mqken-d8v0sq7.png" alt="Pokemon Font" class="logo"></a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#one">Container Page</a></li>
+                <li><a href="#two">Page 2</a></li>
+                <li><a href="#three">Page 3</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <input type="text" class="form-control" placeholder="Search" id="search">
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div>
+        <!--This is the foreach i am trying to use-->
+
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad">
+
+
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><%= monArr.name %></h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-3 col-lg-3 " align="center">
+                                    <img src="images/sprites/<%= monArr.id%>.gif" class="img-responsive"> </div>
+                                <div class=" col-md-9 col-lg-9 ">
+                                    <table class="table table-user-information">
+                                        <tbody>
+                                            <tr>
+                                                <td>Type 1:</td>
+                                                <td>
+                                                    <%= monArr.type1%>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Type 2:</td>
+                                                <td>
+                                                    <%= monArr.type2%>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>BaseHp:</td>
+                                                <td>
+                                                    <%= monArr.baseHp%>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>BaseAtk:</td>
+                                                <td>
+                                                    <%= monArr.baseAtk%>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>BaseDef:</td>
+                                                <td>
+                                                    <%= monArr.baseDef%>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>BaseSpAtk:</td>
+                                                <td>
+                                                    <%= monArr.baseSpAtk%>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>BaseSpDef:</td>
+                                                <td>
+                                                    <%= monArr.baseSpDef%>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>BaseSpeed:</td>
+                                                <td>
+                                                    <%= monArr.baseSpeed%>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Description</td>
+                                                <td>
+                                                    <p>
+                                                        <%= monArr.description%>
+                                                    </p>
+                                                </td>
+
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-footer">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- This was a for loop example i thought might work -->
+
+
+    </div>
+
+
+
+    <section ng-controller="mainController">
+        <article ng-view>
+
+        </article>
+    </section>
+</body>
+
+</html>
