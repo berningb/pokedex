@@ -25,7 +25,7 @@ app.use(orm.express("mysql://ayylmao:berningman123@mysql.hlaingfahim.com/w3poked
             description: String
 
         });
-        
+
         models.weakness = db.define("weakness", {
             name: String
         });
@@ -34,30 +34,42 @@ app.use(orm.express("mysql://ayylmao:berningman123@mysql.hlaingfahim.com/w3poked
             name: String,
             description: String
         });
-        
-//        models.monster.hasMany
+
+        models.monster.hasMany('weakness', models.weakness, {},{autoFetch:true});
+        models.monster.hasMany('ability', models.ability, {},{autoFetch:true});
+
+        models.monster.get(1, function (err, monster) {
+            if (err) throw err;
+            //console.log(monster.weakness)
+            
+        });
+        models.monster.get(1, function (err, monster) {
+            if (err) throw err;
+            //console.log(monster.ability);
+
+        });
+
         next();
     }
-    
-    
-
-
 }));
 
 
 app.set('view engine', 'ejs');
 
+
+
 app.get('/', function (req, res) {
     req.models.monster.all(function (err, results) {
-        res.render('index', {
+        res.render('home', {
             monArr: results
         });
     });
 });
 
-app.get('/home', function (req, res) {
-    req.models.monster.all(function (err, results) {
-        res.render('home', {
+
+app.get('/:id', function (req, res) {
+    req.models.monster.get(req.params.id,function (err, results) {
+        res.render('singleMon', {
             monArr: results
         });
     });
