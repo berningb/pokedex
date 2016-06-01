@@ -74,3 +74,8 @@
 .monster {
     height: 150px;
 }
+
+#search {
+    width: 400px;
+    margin-top: 8px;
+}

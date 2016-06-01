@@ -35,7 +35,6 @@ app.use(orm.express("mysql://ayylmao:berningman123@mysql.hlaingfahim.com/w3poked
             description: String
         });
 
-<<<<<<< HEAD
 //        models.monster.hasMany('weakness', models.weakness, {},{autoFetch:true});
 //        models.monster.hasMany('ability', models.ability, {},{autoFetch:true});
 
@@ -49,13 +48,6 @@ app.use(orm.express("mysql://ayylmao:berningman123@mysql.hlaingfahim.com/w3poked
             //            //console.log(monster.ability);
             //
             //        });
-=======
-        models.monster.hasMany('weakness', models.weakness, {},{autoFetch:true});
-        models.monster.hasMany('ability', models.ability, {},{autoFetch:true});
-
-        
-con
->>>>>>> ca7deae352a259cdeb8521cf3a5779128589dced
         next();
     }
 }));
