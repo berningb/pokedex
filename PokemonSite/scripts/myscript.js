@@ -2,30 +2,30 @@ document.body.onkeyup = function (e) {
     var answer = document.getElementById('search').value.replace(/\s/g, '');
 
     var name = document.getElementsByClassName('monName');
-    
+
+    var numbers = document.getElementsByClassName('monNum');
 
 
-    console.log(answer);
+    //    console.log(answer);
 
     for (i = 0; i < name.length; i++) {
-        if (answer === name[i].innerHTML) {
+        if (answer.toLowerCase() === name[i].innerHTML.toLowerCase()) {
             for (j = 0; j < name.length; j++) {
-                document.getElementById("poke" + [j+1]).style.display = "none";
+                document.getElementById("poke" + [j + 1]).style.display = "none";
             }
-            document.getElementById("poke" +[i+1]).style.display = "table-row";
+            document.getElementById("poke" + [i + 1]).style.display = "table-row";
             break;
-        }else{
+        } else if (answer === numbers[i].innerHTML) {
+
+            for (j = 0; j < numbers.length; j++) {
+                document.getElementById("poke" + [j + 1]).style.display = "none";
+            }
+            document.getElementById("poke" + [i + 1]).style.display = "table-row";
+            break;
+        } else {
             for (j = 0; j < name.length; j++) {
-                document.getElementById("poke" + [j+1]).style.display = "table-row";
+                document.getElementById("poke" + [j + 1]).style.display = "table-row";
             }
         }
     }
-
-    //    var number = $('.monster .number').html();
-    //    console.log(number);
-    //    console.log(answer);
-    //    if (answer === name.replace(/\s/g, '')) {
-    //        console.log('yay');
-    //    } 
-
 }
