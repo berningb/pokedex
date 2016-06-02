@@ -35,19 +35,14 @@ app.use(orm.express("mysql://ayylmao:berningman123@mysql.hlaingfahim.com/w3poked
             description: String
         });
 
-//        models.monster.hasMany('weakness', models.weakness, {},{autoFetch:true});
-//        models.monster.hasMany('ability', models.ability, {},{autoFetch:true});
+        models.monster.hasMany('weakness', models.weakness, {}, {
+            autoFetch: false
+        });
+        models.monster.hasMany('ability', models.ability, {}, {
+            autoFetch: false
+        });
 
-//        models.monster.get(1, function (err, monster) {
-            //            if (err) throw err;
-            //            //console.log(monster.weakness)
-            //            
-            //        });
-            //        models.monster.get(1, function (err, monster) {
-            //            if (err) throw err;
-            //            //console.log(monster.ability);
-            //
-            //        });
+
         next();
     }
 }));
@@ -67,10 +62,19 @@ app.get('/', function (req, res) {
 
 
 app.get('/:id', function (req, res) {
-    req.models.monster.get(req.params.id,function (err, results) {
-        res.render('singleMon', {
-            monArr: results
+    req.models.monster.get(req.params.id, function (err, results) {
+        results.getWeakness(function (err, weaknesses) {
+            results.weakness = weaknesses;
+            results.getAbility(function (err, abilities) {
+                results.ability = abilities;
+                res.render('singleMon', {
+                    monArr: results
+                });
+            });
         });
+
+
+
     });
 });
 
