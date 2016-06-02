@@ -16,11 +16,7 @@
     <nav class="navbar" id="navigator">
         <div class="container-fluid">
             <div class="navbar-header">
-                <!--
-                <a class="navbar-brand" href="#index"><img src="images/http://fontmeme.com/embed.php?text=Monster&name=Pokemon Hollow.ttf&size=114&style_color=15155E.png" alt="Dispute Bills" class="logo">
-                </a>
--->
-                <a class="navbar-brand" href="#index"><img src="http://pre03.deviantart.net/7f89/th/pre/i/2015/147/7/c/pikachu_by_mqken-d8v0sq7.png" alt="Pokemon Font" class="logo"></a>
+                <a class="navbar-brand" href="/"><img src="http://pre03.deviantart.net/7f89/th/pre/i/2015/147/7/c/pikachu_by_mqken-d8v0sq7.png" alt="Pokemon Font" class="logo"></a>
             </div>
             <ul class="nav navbar-nav">
                 <li class="active"><a href="/">Home</a></li>
@@ -54,7 +50,7 @@
         </thead>
         <tbody id="tableRows">
             <% for(var i=0; i < monArr.length; i++) { %>
-                <tr class="monster" onclick="location.href='<%= monArr[i].id %>'">
+                <tr class="monster" onclick="location.href='monster/<%= monArr[i].id %>'">
                     <td class="number">
                         <%= monArr[i].number %>
                     </td>

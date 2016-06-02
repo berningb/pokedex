@@ -61,7 +61,7 @@ app.get('/', function (req, res) {
 });
 
 
-app.get('/:id', function (req, res) {
+app.get('/monster/:id', function (req, res) {
     req.models.monster.get(req.params.id, function (err, results) {
         results.getWeakness(function (err, weaknesses) {
             results.weakness = weaknesses;

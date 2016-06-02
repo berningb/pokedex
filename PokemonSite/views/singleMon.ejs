@@ -2,19 +2,19 @@
 <html>
 
 <head>
-    <link href="styles/main.css" type="text/css" rel="stylesheet">
+    <link href="../styles/main.css" type="text/css" rel="stylesheet">
 
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="scripts/script.js"></script>
+    <script src="../scripts/script.js"></script>
 </head>
 
 <body ng-app="myApp" id="bod">
     <nav class="navbar" id="navigator">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#index"><img src="http://pre03.deviantart.net/7f89/th/pre/i/2015/147/7/c/pikachu_by_mqken-d8v0sq7.png" alt="Pokemon Font" class="logo"></a>
+                <a class="navbar-brand" href="/"><img src="http://pre03.deviantart.net/7f89/th/pre/i/2015/147/7/c/pikachu_by_mqken-d8v0sq7.png" alt="Pokemon Font" class="logo"></a>
             </div>
             <ul class="nav navbar-nav">
                 <li class="active"><a href="/">Home</a></li>
@@ -42,7 +42,7 @@
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-md-3 col-lg-3 " align="center">
-                                    <img src="images/sprites/<%= monArr.id%>.gif" class="img-responsive"> </div>
+                                    <img src="../images/sprites/<%= monArr.id%>.gif" class="img-responsive"> </div>
                                 <div class=" col-md-9 col-lg-9 ">
                                     <table class="table table-user-information">
                                         <tbody>
@@ -61,7 +61,7 @@
                                             <tr>
                                                 <td>Abilities:</td>
                                                 <% for(var i=0; i < monArr.ability.length; i++) { %>
-                                                    <td>
+                                                    <td class = "abil">
                                                         <%= monArr.ability[i].name%>
                                                  
                                                         </br>
@@ -73,7 +73,7 @@
                                             <tr>
                                                 <td>Weaknesses:</td>
                                                 <% for(var i=0; i < monArr.weakness.length; i++) { %>
-                                                    <td><%= monArr.weakness[i].name%></td>
+                                                    <td class = "weak"><%= monArr.weakness[i].name%></td>
                                                 <% }%>
                                             </tr>
                                             <tr>
