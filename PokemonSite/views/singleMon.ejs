@@ -18,7 +18,7 @@
             </div>
             <ul class="nav navbar-nav">
                 <li class="active"><a href="/">Home</a></li>
-      
+
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li>
@@ -30,109 +30,106 @@
     <div>
         <!--This is the foreach i am trying to use-->
 
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad">
+        <div class="container" id='monsterBox'>
 
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><%= monArr.name %></h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-3 col-lg-3 " align="center">
+                            <img src="images/sprites/<%= monArr.id%>.gif" class="img-responsive"> </div>
+                        <div class=" col-md-9 col-lg-9 ">
+                            <table class="table table-user-information">
+                                <tbody>
+                                    <tr>
+                                        <td>Type 1:</td>
+                                        <td>
+                                            <%= monArr.type1%>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Type 2:</td>
+                                        <td>
+                                            <%= monArr.type2%>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Abilities:</td>
+                                        <% for(var i=0; i < monArr.ability.length; i++) { %>
+                                            <td>
+                                                <%= monArr.ability[i].name%>
 
-                    <div class="panel panel-info">
-                        <div class="panel-heading">
-                            <h3 class="panel-title"><%= monArr.name %></h3>
+                                                    </br>
+
+                                                    <%= monArr.ability[i].description%>
+                                            </td>
+                                            <% }%>
+                                    </tr>
+                                    <tr>
+                                        <td>Weaknesses:</td>
+                                        <% for(var i=0; i < monArr.weakness.length; i++) { %>
+                                            <td>
+                                                <%= monArr.weakness[i].name%>
+                                            </td>
+                                            <% }%>
+                                    </tr>
+                                    <tr>
+                                        <td>BaseHp:</td>
+                                        <td>
+                                            <%= monArr.baseHp%>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>BaseAtk:</td>
+                                        <td>
+                                            <%= monArr.baseAtk%>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>BaseDef:</td>
+                                        <td>
+                                            <%= monArr.baseDef%>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>BaseSpAtk:</td>
+                                        <td>
+                                            <%= monArr.baseSpAtk%>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>BaseSpDef:</td>
+                                        <td>
+                                            <%= monArr.baseSpDef%>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>BaseSpeed:</td>
+                                        <td>
+                                            <%= monArr.baseSpeed%>
+                                        </td>
+                                    </tr>
+                                    <tr id='mondes'>
+                                        <td>Description:</td>
+                                        <td>
+                                            <p>
+                                                <%= monArr.description%>
+                                            </p>
+                                        </td>
+
+                                    </tr>
+
+                                </tbody>
+                            </table>
+
                         </div>
-                        <div class="panel-body">
-                            <div class="row">
-                                <div class="col-md-3 col-lg-3 " align="center">
-                                    <img src="images/sprites/<%= monArr.id%>.gif" class="img-responsive"> </div>
-                                <div class=" col-md-9 col-lg-9 ">
-                                    <table class="table table-user-information">
-                                        <tbody>
-                                            <tr>
-                                                <td>Type 1:</td>
-                                                <td>
-                                                    <%= monArr.type1%>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Type 2:</td>
-                                                <td>
-                                                    <%= monArr.type2%>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Abilities:</td>
-                                                <% for(var i=0; i < monArr.ability.length; i++) { %>
-                                                    <td>
-                                                        <%= monArr.ability[i].name%>
-                                                 
-                                                        </br>
-                                                        
-                                                        <%= monArr.ability[i].description%>
-                                                    </td>
-                                                <% }%>
-                                            </tr>
-                                            <tr>
-                                                <td>Weaknesses:</td>
-                                                <% for(var i=0; i < monArr.weakness.length; i++) { %>
-                                                    <td><%= monArr.weakness[i].name%></td>
-                                                <% }%>
-                                            </tr>
-                                            <tr>
-                                                <td>BaseHp:</td>
-                                                <td>
-                                                    <%= monArr.baseHp%>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>BaseAtk:</td>
-                                                <td>
-                                                    <%= monArr.baseAtk%>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>BaseDef:</td>
-                                                <td>
-                                                    <%= monArr.baseDef%>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>BaseSpAtk:</td>
-                                                <td>
-                                                    <%= monArr.baseSpAtk%>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>BaseSpDef:</td>
-                                                <td>
-                                                    <%= monArr.baseSpDef%>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>BaseSpeed:</td>
-                                                <td>
-                                                    <%= monArr.baseSpeed%>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Description</td>
-                                                <td>
-                                                    <p>
-                                                        <%= monArr.description%>
-                                                    </p>
-                                                </td>
-
-                                            </tr>
-
-                                        </tbody>
-                                    </table>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel-footer">
-                        </div>
-
                     </div>
                 </div>
+                <div class="panel-footer">
+                </div>
+
             </div>
         </div>
 
