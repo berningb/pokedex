@@ -79,3 +79,12 @@
     width: 400px;
     margin-top: 8px;
 }
+
+#mondes {
+    width: 150px;
+    text-align: center;
+}
+
+#monsterBox {
+    width: 80%;
+}
