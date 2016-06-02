@@ -42,27 +42,27 @@
     <table class="table table-hover" id="landing_table">
         <thead>
             <tr>
-                <th>#</th>
-                <th>Sprite</th>
-                <th>Name</th>
-                <th>Type</th>
+                <th class="title">#</th>
+                <th class="title">Sprite</th>
+                <th class="title">Name</th>
+                <th class="title">Type</th>
             </tr>
         </thead>
         <tbody id="tableRows">
             <% for(var i=0; i < monArr.length; i++) { %>
                 <tr class="monster" onclick="location.href='monster/<%= monArr[i].id %>'">
                     <td class="number">
-                        <%= monArr[i].number %>
+                        <p class="monNum"><%= monArr[i].number %></p>
                     </td>
-                    <td><img src="images/sprites/<%= monArr[i].id %>.gif"></td>
+                    <td class = "parent"><img class = "monImg child" src="images/sprites/<%= monArr[i].id %>.gif"></td>
                     <td class="name">
-                        <%= monArr[i].name %>
+                        <p class = "monName"><%= monArr[i].name %></p>
                     </td>
                     <td>
-                        <div class="type1 <%= monArr[i].type1%>">
+                        <div class="type type1 <%= monArr[i].type1%>">
                             <%= monArr[i].type1%>
                         </div>
-                        <div class="type2 <%= monArr[i].type2 %>">
+                        <div class="type type2 <%= monArr[i].type2 %>">
                             <%= monArr[i].type2 %>
                         </div>
                     </td>

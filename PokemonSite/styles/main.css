@@ -88,3 +88,139 @@
 #monsterBox {
     width: 80%;
 }
+
+.monsterImg {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 150px;
+}
+
+.type {
+    width: 100px;
+    height: 30px;
+    font-size: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 23px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.typeB {
+    width: 100px;
+    height: 30px;
+    font-size: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    
+}
+
+.Grass {
+    background-color: #9BCC50;
+}
+
+.Poison {
+    background-color: #B97FC9;
+}
+
+.Fire {
+    background-color: #FD7D24;
+}
+
+.Ice {
+    background-color: #51C4E7;
+}
+
+.Flying {
+    background-color: #51FFE7;
+}
+
+.Psychic {
+    background-color: #F366B9;
+}
+
+.Dark {
+    background-color: #000000;
+    color: white;
+}
+
+.Water {
+    background-color: #000066;
+    color: white;
+}
+
+.Fairy {
+    background-color: #ffafd7;
+}
+
+.Rock {
+    background-color: #A38C21;
+}
+
+.Bug {
+    background-color: #729F3F;
+}
+
+.Ground {
+    background-color: #A99842;
+}
+
+.Electric {
+    background-color: #EED535;
+}
+
+.Dragon {
+    background-color: #F16E57;
+}
+
+.Ghost {
+    background-color: #7B62A3;
+}
+
+.Steel {
+    background-color: #9EB7B8;
+}
+
+.Normal {
+    background-color: #A4ACAF;
+}
+
+.Fighting {
+    background-color: #D56723;
+    color: white;
+}
+
+.title {
+    text-align: center;
+}
+
+.monName {
+    font-size: 30px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.monImg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.monNum {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 50px;
+    ;
+}
+
+.parent {
+    position: relative;
+}
+
+.child {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
