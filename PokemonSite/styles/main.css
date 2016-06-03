@@ -13,6 +13,9 @@
 
 #navigator {
     background-color: #ED0000;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
 }
 
 #navigator a {
@@ -34,6 +37,8 @@
     width: 75%;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
+    top: 150px;
 }
 
 #landing_table th {
@@ -66,8 +71,6 @@
 .table-user-information > tbody > tr > td {
     border-top: 0;
 }
-
-
 
 .toppad {
     margin-top: 20px;
@@ -118,6 +121,13 @@
     margin-bottom: 5px;
     
 }
+
+/*
+.tableRows{
+    position: relative;
+    top: 150px;
+}
+*/
 
 .Grass {
     background-color: #9BCC50;
