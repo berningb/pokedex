@@ -11,6 +11,11 @@
     background-repeat: repeat;
 }
 
+.container{
+    position: relative;
+    top: 150px;
+}
+
 #navigator {
     background-color: #ED0000;
     position: fixed;
